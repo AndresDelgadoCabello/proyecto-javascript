@@ -4,19 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calcula cuanto falta para tu cumpleaños</title>
+    <script src="https://kit.fontawesome.com/4c6d1e5cb9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>buscador de imagenes</title>
 </head>
 <body>
-    <h1>Cuantos dias faltan para tu cumpleaños?</h1>
-    <form>
-        <label>Ingresa tu fecha de nacimiento</label>
-        <br><br>
-    <input id="cumple" onblur="calcularDias()" type="date">
-    <p id="resultados" ></p>
-    </form>
-    <div id="usuarios">
-        
-    </div>
+    <header>
+        <div class="header">
+            <div class="header__nav">
+                <h1><i class="fa-solid fa-camera" style="color:#ff8e3c"></i>buscador de imagenes mediante Unsplash API</h1>
+                <div class="header__buscador">
+                    <input type="text" id="input"
+                    placeholder="buscar...">
+                    <i onclick="loadImg()" class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="main">
+            <div class="main__imagenes">
+            </div>
+        </div>
+    </main>
     <script src="main.js"></script>
 </body>
 </html>

@@ -1,33 +1,38 @@
-(function(){
-    let hoy = new Date();
-    document.getElementById("cumple").max = hoy.getFullYear() + "-" + 
-    (hoy.getMonth() + 1) + "-" + (hoy.getDate() < 10 ? ("0" + (hoy.getDate()-1)) : (hoy.getDate()-1));
-})();
-function calcularDias (){
-    let hoy = new Date();
-    let cumple = new Date(document.getElementById("cumple").value);
-    let edad = hoy.getFullYear() - cumple.getFullYear();
-    let siguienteCumple = new Date(hoy.getFullYear(), cumple.getMonth(), cumple.getDate());
-    if(hoy > siguienteCumple){
-        siguienteCumple.setFullYear(hoy.getFullYear() + 1);
+const input = document.getElementById("input");
+const imagenes = document.getElementsByClassName("main__imagenes")
+[0];
+
+input.addEventListener("keydown", function(event){
+    if(event.key === "enter")
+    loadImg();
+})
+
+function loadImg(){
+    removerImg();
+
+        const url = "https://api.unsplash.com/search/photos/?query="+input.value+"&per_page=5&client_id=9FvYye812LCVi5q7wrXD7dF_dUea4Wl5MLpuivvMREs";
+        fetch(url)
+        .then(response =>{
+        if(response.ok)
+        return response.json();
+        else
+        alert(response.status)
+})
+
+.then(data =>{
+    const imageNodes = [];
+    for(let i = 0; i < data.results.length;i++){
+        imageNodes[i] = document.createElement("div");
+        imageNodes[i].className = "img";
+        imageNodes[i].style.backgroundImage = "url("+data.results[i].urls.raw+")";
+        imageNodes[i].addEventListener("dblclick", function(){
+            window.open(data.results[i].links.download, "_blank");
+        })
+        imagenes.appendChild(imageNodes[i]);
     }
-    let unDia = 24 * 60 * 60 * 1000;
-    let diasFaltantes = Math.ceil((siguienteCumple.getTime() - hoy.getTime()) / (unDia));
-    if (diasFaltantes==364){
-        document.getElementById("resultados").innerText = "Feliz Cumpleaños a Ti!";
-    } else if (diasFaltantes && edad < 150) {
-        document.getElementById("resultados").innerText = `En ${diasFaltantes} dia(s), tendras ${edad + 1} `;
-    } else {
-        document.getElementById("resultados").innerText = "por favor ingresa una fecha valida >:C";
-    }
+})
+
 }
-
-const apiUsuarios = "https://jsonplaceholder.typicode.com/users";
-const contenedorFotos = document.getElementById("contenedorFotos");
-
-fetch(apiUsuarios)
-    .then(respuesta => respuesta.json())
-    .then((datos) => {
-        console.log(datos);
-    })
-    .catch(error => console.log(error))
+function removerImg(){
+    imagenes.innerHTML = "";
+}
