@@ -4,28 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/4c6d1e5cb9.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/styles.css">
-    <title>buscador de imagenes</title>
+    <title>conversor de unidades de medida</title>
 </head>
 <body>
-    <header>
-        <div class="header">
-            <div class="header__nav">
-                <h1><i class="fa-solid fa-camera" style="color:#ff8e3c"></i>buscador de imagenes mediante Unsplash API</h1>
-                <div class="header__buscador">
-                    <input type="text" id="input"
-                    placeholder="buscar...">
-                    <i onclick="loadImg()" class="fa-solid fa-magnifying-glass"></i>
-                </div>
-            </div>
-        </div>
-    </header>
     <main>
-        <div class="main">
-            <div class="main__imagenes">
-            </div>
+        <div class="contenedor">
+        <h2>Cálculadora de IMC</h2>
+        <div class="altura">
+            <label for="altura">Altura (Metros)</label>
+            <input type="number" id="altura" />
         </div>
+        <div class="peso">
+            <label for="peso">Peso (KiloGramos)</label>
+            <input type="number" id="peso" />
+        </div>
+        <div class="calorias">
+            <button onclick="calcularIMC()">Calcular</button>
+        </div>
+        <span id="resultado"></span>
+    </div>
     </main>
     <script src="main.js"></script>
 </body>

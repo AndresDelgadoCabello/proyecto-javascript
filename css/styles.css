@@ -4,82 +4,50 @@
     margin: 0;
 }
 
-body{
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: #004643;
+    color: white;
+}
+
+.contenedor {
     font-family: 'Roboto', sans-serif;
-    background-color: #eff0f3;
-    color: #0d0d0d;
-}
-/* header y buscador */
-header{
-    border-bottom: 5px solid #0d0d0d;
-}
-.header{
-    width: 95%;
-    margin: auto;
-}
-.header__nav{
+    width: 600px;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 30px 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 100px;
 }
-.header__nav h1{
-    font-size: 2rem;
+
+
+.altura, .peso, .calorias {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
-.header__nav i{
-    margin-right: 10px;
-}
-.header__buscador{
-    position: relative;
-    width: 300px;
-}
-.header__buscador input{
-    box-sizing: border-box;
-    width: 100%;
-    font-size: 1rem;
-    padding: 10px;
-    border-radius: 30px;
+
+input, button {
+    padding: 20px;
+    font-size: 20px;
     outline: none;
-    border: 3px solid #181818;
-}
-.header__buscador i{
-    color: #ff8e3c;
-    position: absolute;
-    top: 30%;
-    right:5%;
+    border: none;
+    border-radius: 5px;
 }
 
-.main__imagenes{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: flex-start;
+button {
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    background-color: #f9bc60;
+    color:#001e1d ;
+    margin-top:5px;
 }
-
-.img{
-    width: 400px;
-    height: 200px;
-    margin-top: 40px;
-    background-position: 50% 50%;
-    background-size: cover;
-    border-radius: 2px;
-}
-@media(max-width:1050px){
-    .img{
-        width: 100%;
-    }
-    .header__nav{
-        justify-content: center;
-    }
-    .header__nav h1{
-        padding: 5px 0;
-    }
-}
-@media(max-width:500px){
-    .header__nav h1{
-        text-align: center;
-        font-size: 1.5rem;
-    }
-
+h2{
+    font-family: 'Roboto', sans-serif;
 }
