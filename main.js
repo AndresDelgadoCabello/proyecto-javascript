@@ -42,6 +42,9 @@ btn.addEventListener("click", function onClick() {
         }).showToast();
     
 });
+
+// uso de fetch y API //
+
 const urlGatos = "https://api.thecatapi.com/v1/images/search"
 
 fetch(urlGatos)
