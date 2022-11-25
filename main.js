@@ -28,3 +28,25 @@ if (altura.value !== '' && peso.value !== '') {
     resultado.innerHTML = "resultados"
 }
 }
+
+// uso de eventos y de librerias //
+
+const btn = document.getElementById('btn');
+
+btn.addEventListener("click", function onClick() {
+    btn.style.backgroundColor = "#abd1c6";
+
+    Toastify({
+        text: "Datos procesados correctamente",
+        duration: 3000
+        }).showToast();
+    
+});
+const urlGatos = "https://api.thecatapi.com/v1/images/search"
+
+fetch(urlGatos)
+.then(res => res.json())
+.then(data =>{
+    const img = document.querySelector("img")
+    img.src = data[0].url
+})

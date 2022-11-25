@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <title>calculadora de IMC</title>
 </head>
 <body>
@@ -20,11 +21,15 @@
             <input type="number" id="peso" />
         </div>
         <div class="calorias">
-            <button onclick="calcularIMC()">Calcular</button>
+            <button id="btn" onclick="calcularIMC()">Calcular</button>
         </div>
         <span id="resultado"></span>
+        <div>
+            <img alt="">
+        </div>
     </div>
     </main>
     <script src="main.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
 </html>
