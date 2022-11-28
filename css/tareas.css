@@ -4,6 +4,9 @@
     margin: 0;
     box-sizing: border-box;
 }
+main{
+    background-color: #004643;
+}
 
 .header{
     background: #004643;
@@ -30,4 +33,40 @@
     }
     .header__menu a:hover{
         color: purple;
+    }
+
+    h2{
+        text-align: center;
+        margin-top: 40px;
+        
+    }
+
+    .inputTareas{
+        display: flex;
+    justify-content: center;
+    margin-top: 30px;
+
+    }
+    .inputTareas label{
+        margin-right: 10px;
+        color: #fffffe;
+    }
+
+    .inputTareas button{
+        margin-left: 10px;
+    }
+    .contenedorTareas{
+        display: flex;
+        justify-content: center;
+
+    }
+    #contenedorTareas{
+        background-color: #abd1c6;
+        width: 300px;
+        border: 5px solid #f9bc60;
+        padding: 50px;
+        margin: 20px;
+    }
+    h2{
+        color: #fffffe;
     }
