@@ -23,16 +23,17 @@ main{
     }
 
     .header__menu a{
+        font-family: 'Roboto', sans-serif;
     color: white;
     text-decoration: none;
     display: inline-block;
     padding: 10px 15px;
     font-size: 14px;
     transition: all 500ms ease;
-    border-bottom: 4px purple;
+    border-bottom: 4px #f9bc60;
     }
     .header__menu a:hover{
-        color: purple;
+        color: #f9bc60;
     }
 
     h2{
@@ -45,15 +46,14 @@ main{
         display: flex;
     justify-content: center;
     margin-top: 30px;
+    gap: 15px;
 
     }
     .inputTareas label{
-        margin-right: 10px;
         color: #fffffe;
     }
 
     .inputTareas button{
-        margin-left: 10px;
     }
     .contenedorTareas{
         display: flex;

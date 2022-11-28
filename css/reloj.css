@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 *{
     margin: 0px;
     padding: 0px;
@@ -10,7 +11,7 @@ body{
 
 
 .reloj{
-    width: 400px;
+    width: 500px;
 background-color: #004643;
     color: #ffffff;
     text-align: center;
@@ -21,21 +22,21 @@ background-color: #004643;
     user-select: none;
 }
 
-.reloj .dia{
+.dia{
     font-size: 20px;
 }
 
-.reloj .mes{
+.mes{
     font-size: 40px;
 }
 
-.reloj .hora{
+.hora{
     display: flex;
     justify-content: center;
     margin-top: 30px;
 }
 
-.reloj .hora p{
+.hora p{
     font-size: 50px;
     background-color: #f9bc60;
     padding: 10px;
@@ -58,6 +59,7 @@ background-color: #004643;
     }
 
     .header__menu a{
+        font-family: 'Roboto', sans-serif;
     color: white;
     text-decoration: none;
     display: inline-block;
