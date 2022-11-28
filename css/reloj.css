@@ -1,0 +1,71 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #004643;
+}
+
+
+.reloj{
+    width: 400px;
+background-color: #004643;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px;
+    margin: 20px auto;
+    border-radius: 10px;
+    border-bottom: 10px solid black;
+    user-select: none;
+}
+
+.reloj .dia{
+    font-size: 20px;
+}
+
+.reloj .mes{
+    font-size: 40px;
+}
+
+.reloj .hora{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.reloj .hora p{
+    font-size: 50px;
+    background-color: #f9bc60;
+    padding: 10px;
+    margin: 0px 5px;
+    border: 1px solid #ffffff;
+}
+
+.header{
+    background: #004643;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    position: sticky;
+}
+
+    .header__container{
+        width: 90%;
+        max-width: 1200%;
+        margin: auto;
+    }
+
+    .header__menu a{
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 14px;
+    transition: all 500ms ease;
+    border-bottom: 4px #f9bc60;
+    }
+    .header__menu a:hover{
+        color: #f9bc60;
+    }

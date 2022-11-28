@@ -2,6 +2,7 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 
@@ -36,8 +37,8 @@ body {
 input, button {
     padding: 20px;
     font-size: 20px;
-    outline: none;
-    border: none;
+    outline: ninguno;
+    border: ninguno;
     border-radius: 5px;
 }
 
@@ -51,3 +52,51 @@ button {
 h2{
     font-family: 'Roboto', sans-serif;
 }
+
+/* Reloj */
+
+li {
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+a.enlace-eliminar {
+    margin-left: 10px;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.tachado {
+    text-decoration: line-through;
+}
+
+/* header */
+
+.header{
+    background: #004643;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    position: sticky;
+}
+
+    .header__container{
+        width: 90%;
+        max-width: 1200%;
+        margin: auto;
+    }
+
+    .header__menu a{
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 14px;
+    transition: all 500ms ease;
+    border-bottom: 4px #f9bc60;
+    }
+    .header__menu a:hover{
+        color: #f9bc60;
+    }
+
+
