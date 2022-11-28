@@ -4,11 +4,17 @@
     margin: 0;
     box-sizing: border-box;
 }
+body{
+    font-family: 'Roboto', sans-serif;
+
+}
 main{
     background-color: #004643;
 }
 
 .header{
+    font-family: 'Roboto', sans-serif;
+
     background: #004643;
     z-index: 10;
     top: 0;
@@ -23,7 +29,6 @@ main{
     }
 
     .header__menu a{
-        font-family: 'Roboto', sans-serif;
     color: white;
     text-decoration: none;
     display: inline-block;
@@ -53,8 +58,7 @@ main{
         color: #fffffe;
     }
 
-    .inputTareas button{
-    }
+
     .contenedorTareas{
         display: flex;
         justify-content: center;

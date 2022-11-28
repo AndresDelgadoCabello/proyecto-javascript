@@ -12,8 +12,8 @@ body{
 
 .reloj{
     width: 500px;
-background-color: #004643;
-    color: #ffffff;
+background-color: #f9bc60;
+    color: #001e1d;
     text-align: center;
     padding: 30px;
     margin: 20px auto;
@@ -38,13 +38,15 @@ background-color: #004643;
 
 .hora p{
     font-size: 50px;
-    background-color: #f9bc60;
+    background-color: #fffffe;
     padding: 10px;
     margin: 0px 5px;
     border: 1px solid #ffffff;
 }
 
 .header{
+    font-family: 'Roboto', sans-serif;
+
     background: #004643;
     z-index: 10;
     top: 0;
@@ -59,7 +61,6 @@ background-color: #004643;
     }
 
     .header__menu a{
-        font-family: 'Roboto', sans-serif;
     color: white;
     text-decoration: none;
     display: inline-block;

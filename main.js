@@ -1,3 +1,7 @@
+
+// calculadora de IMC //
+
+
 const altura = document.querySelector("#altura")
 const peso = document.querySelector("#peso")
 const resultado = document.querySelector("#resultado")
@@ -149,14 +153,3 @@ btn.addEventListener("click", function onClick() {
         }).showToast();
     
 });
-
-// uso de fetch y API //
-
-const urlGatos = "https://api.thecatapi.com/v1/images/search"
-
-fetch(urlGatos)
-.then(res => res.json())
-.then(data =>{
-    const img = document.querySelector("img")
-    img.src = data[0].url
-})
